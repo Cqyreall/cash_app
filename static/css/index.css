@@ -1,0 +1,115 @@
+.index-header {
+
+    color: black;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    background-color: lightblue;
+    margin-top: 0%;
+    padding: 16px;
+}
+
+.index-paragraph {
+
+    font-family: 'Lato', sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+main {
+    font-family: 'Lato', sans-serif;
+}
+
+.first-group {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-main {
+
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+
+.first-section {
+    margin-left: 2%;
+}
+
+.second-section {
+
+    margin-left: 5%;
+    padding: 4px;
+}
+
+.third-section {
+
+    margin-left: 5%;
+}
+
+.second-main {
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    margin-top: 0;
+    
+}
+
+.first-paragraph {
+    margin-left: 6%;
+}
+
+.second-paragraph {
+
+    margin-left: 16%;
+    margin-right: 3%;
+}
+
+.third-paragraph {
+    margin-left: 8%;
+}
+
+.merchant-tag {
+
+    font-family: 'Kufam', cursive;
+    display: block;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 2);
+    padding: 10px;
+    list-style: none;
+    margin-right: 25%;
+    margin-left: 25%;
+    display: flex;
+    justify-content: space-between; 
+    font-size: 24px; 
+    background-color: lightblue;
+    /* font-weight: bolder; */
+    color: white;
+}
+.icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+.name {
+    margin-left: 42%;
+    display: flex;
+    align-self: center;
+}
+
+.merchant-head {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Kufam', cursive;
+}
+
+.name-tag {
+    margin-left: 37%;
+    display: flex;
+    align-self: center;
+
+}
+
+

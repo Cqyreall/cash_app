@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<hgroup class="merchant-head">
+   <h1>List of Tags</h1>
+</hgroup>
+
+
+{% for tag in tags %}
+<ul class="merchant-tag">
+   <section class="name-tag">
+      <li>{{ tag.name }}</li> 
+   </section>
+
+   <section class="icons">
+      <a href="/tags/{{ tag.id }}/edit"><span>&#9998;</span></a>
+   <form action="/tags/{{ tag.id }}/delete" method="post">
+      <input type="submit" value="Delete">
+  </form>
+   </section>
+   
+</ul>
+  
+
+{% endfor %}
+    
+{% endblock  %}

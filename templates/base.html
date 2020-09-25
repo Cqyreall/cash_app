@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128179;-Cash App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kufam:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body >
+
+    <section class="header">
+        <img src="https://arizent.brightspotcdn.com/44/0f/f4a3043847c692c7c0adb69fdc6e/expensive-card-cropped.png" alt="blank" class="header-image">
+        <h1 class="heading"> Cash App</h1>
+    <nav class="navigation">
+        <ul>
+            <button class="dropdown"><a href="/home">Home</a></button>
+
+            <li class="drop">
+                <button class="dropdown">Merchants</button> 
+                <ul class="dropdown-content">
+                    <li class="content"><a href="/merchants">All Merchants</a></li>
+                    <li class="content"><a href="/merchants/new">Add New Merchant</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <button class="dropdown">Tags</button> 
+                <ul class="dropdown-content">
+                    <li class="content"><a href="/tags">All Tags</a></li>
+                    <li class="content"><a href="/tags/new">Add new Tag</a></li>
+                </ul>
+            </li>
+            <li class="drop">
+                <button class="dropdown">Transactions</button> 
+                <ul class="dropdown-content">
+                    <li class="content"><a href="/transactions">All Transactions</a></li>
+                    <li class="content"><a href="/transactions/new">Add New Transaction</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    </section>
+    
+    {% block content %}
+        
+    {% endblock  %}
+    <footer>
+        <p><span>&#169;</span> CodeClan </p>
+        <p> by Cyril Ishabiyi</p>
+    </footer>
+</body>
+
+</html>

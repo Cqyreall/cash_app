@@ -1,0 +1,182 @@
+body {
+
+    margin: 0;
+}
+
+.login-div {
+
+    /* margin-top: 2% auto; */
+
+    font-family: 'Lato', sans-serif;
+    /* background-color: gainsboro; */
+    background-color: lightblue;
+    margin: 2% auto;
+    width: 350px;
+    padding: 60px;
+
+}
+
+.logo {
+
+    background-color: lightblue;
+    width: 200px;
+    height: 150px;
+    border-radius: 80%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.title {
+
+    font-weight: bolder;
+    font-size: 35px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 18px;
+    text-align: center;
+}
+
+.form {
+    width: 100%;
+    margin-top: 30px;
+    
+}
+
+.form input {
+    font-size: 18px;
+    padding: 10px 20px 10px 5px;
+    background: none;
+    border: none
+
+}
+
+.username {
+
+    display: block;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 2);
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.password {
+    display: block;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 2);
+    padding: 10px;
+    margin: 10px 0;  
+}
+
+.form svg {
+    height: 25px;
+    margin-bottom: -5px;
+    margin-left: 10px;
+    margin-right: 5px;
+
+}
+
+.signin-btn {
+
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 18;
+    border-radius: 30px;
+    background-color: dodgerblue;
+    color: white;
+}
+
+.dropdown {
+
+    background-color:#52ce8a;
+    color: white;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;   
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    text-align: center;
+    /* min-width: 10px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    z-index: 1;
+}
+
+.content {
+    color: blanchedalmond;
+    padding: 4px;
+    text-decoration: none;
+    display: block;
+}
+
+.content:hover {
+    background-color: #ddd;
+}
+
+
+.drop:hover  .dropdown {
+    background-color: dodgerblue;
+}
+
+.drop:hover .dropdown-content {
+    display: block;
+}
+
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    font-family: 'Baloo Tammudu 2', cursive;
+    margin-bottom: 0;
+    padding: -4px;
+}
+
+.heading {
+
+    margin-right: 50%; 
+    color: whitesmoke;
+    align-self: center;
+}
+
+.navigation {
+
+    margin-right: 6%
+}
+
+.header-image {
+
+    width: 100px;
+    height: 70px;
+}
+
+body > footer {
+
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: whitesmoke;
+    margin: 0;
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+
+
+

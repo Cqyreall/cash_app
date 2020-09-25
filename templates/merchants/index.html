@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<hgroup class="merchant-head">
+    <h2>List of Merchants</h2>
+</hgroup>
+
+{% for merchant in merchants %}
+
+<ul class="merchant-tag">
+    <section class="name">
+        <li>{{ merchant.name }}</li>
+    </section>
+    
+    <section class="icons">
+        <a href="/merchants/{{ merchant.id }}/edit"><span>&#9998;</span></a>
+        <form action="/merchants/{{ merchant.id }}/delete" method="post">
+        <input type="submit" value=&#128465;>
+    </form>
+    </section>
+    
+</ul>
+
+    
+{% endfor %}
+    
+{% endblock  %}
