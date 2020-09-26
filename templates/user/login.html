@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for user in users %}
+{{
+    user.name
+}}
+
+{{
+    user.budget
+}}
+
+{{
+
+    user.id
+}} 
+{% endfor %}
+  
+{% endblock  %}

@@ -4,6 +4,8 @@
 
 <h2> Add a New Transaction</h2>
 
+
+
 <form action="/transactions" method="post">
     <label for="merchant">Merchant:</label>
     <select name="merchant_id" id="merchant">
@@ -18,6 +20,14 @@
         <option value="">Select a Tag</option>
         {% for tag in tags %}
         <option value="{{ tag.id }}">{{ tag.name }}</option>   
+        {% endfor %}
+    </select>
+
+    <label for="user">User:</label>
+    <select name="user_id" id="tag">
+        <option value="">Select a User</option>
+        {% for user in users %}
+        <option value="{{ user.id }}">{{ user.name }}</option>   
         {% endfor %}
     </select>
 

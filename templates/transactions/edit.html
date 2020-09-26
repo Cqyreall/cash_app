@@ -17,6 +17,14 @@
         <option value="{{ tag.id }}"{% if tag.id == transaction.tag.id %} selected {% endif %}>{{ tag.name }}</option>
     {% endfor %}
 </select>
+
+<label for="user">User:</label>
+<select name="user_id" id="user">
+    {% for user in users %}
+        <option value="{{ user.id }}"{% if user.id == transaction.user.id %} selected {% endif %}>{{ user.name }}</option>
+    {% endfor %}
+</select>
+
 <label for="amount">Amount</label>
 <input type="number" name="amount" value="{{ transaction.amount }}">
 

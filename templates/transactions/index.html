@@ -6,6 +6,7 @@
 <h2> List of Transactions</h2>
 
 
+
 <table border="1" class="transaction">
 
     <tr>
@@ -30,24 +31,33 @@
                 </form>        
             </section>
         </td>
-        
-        
-
 
     </tr>
     {% endfor %} 
 </table>
 
+<div class=trackbar>
 
+    <section>
+        {% if track < 90  %}
+        <section class="good-spending">
+            <label for="budget track">Good Job Saving:</label>
+            <progress id="prog" value={{track}} max=100>Progress</progress> 
+        </section>
+         
 
+        {% elif track >= 90 %}
+        <section class="spend">
+            <label for="budget track"> Watch Your spending:</label>
+            <progress id="prog" value={{track}} max=100>Progress</progress>  
+        </section>
+        {% endif %}
+    </section>
+    <section class="amount">
+        Total Amount: £{{ total_amount }}
+    </section>
     
+</div>
 
-
-
-
-
-
-
-Total Amount: {{ total_amount }}
     
 {% endblock  %}
