@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2> List of Transactions for {{ tag.name }}</h2>
+
+
+    <table border="1" class="transaction">
+    
+        <tr>
+            <th>Merchant</th>
+            <th>Tag</th>
+            <th>Amount(£)</th>
+            <th>Date</th>
+        </tr>
+        {% for transaction in transactions %}
+        <tr>
+            <td>{{ transaction.merchant.name }}</td>
+            <td>{{ tag.name}}</td>
+            <td>{{ transaction.amount }}</td>
+            <td>{{ transaction.date }}</td>
+    
+        </tr>
+        {% endfor %} 
+    </table>
+    
+{% endblock  %}

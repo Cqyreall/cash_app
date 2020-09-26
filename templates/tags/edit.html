@@ -3,12 +3,18 @@
 
 {% block content %}
 
-<h2>Update Tag</h2>
+<section class="addition">
 
-<form action="/tags/ {{ tag.id }} " method="post">
-    <label for="name">Tag Name</label>
-    <input type="text" name="name" id="name" value="{{ tag.name }}">
-    <input type="submit" value="Update Tag">
-</form>
-    
+    <h2>Update Tag</h2>
+
+    <form action="/tags/ {{ tag.id }} " method="post">
+        <label for="name">Tag Name:</label>
+        <input type="text" name="name" id="name" value="{{ tag.name }}" class="merchant-fill">
+        <input type="submit" value="Update Tag" class="add-merchant">
+    </form>
+        
+
+</section>
+
+
 {% endblock  %}

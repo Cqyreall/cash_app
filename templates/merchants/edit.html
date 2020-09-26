@@ -3,13 +3,19 @@
 
 {% block content %}
 
-<h2>Update Merchant</h2>
+<section class="addition">
 
-<form action="/merchants/{{ merchant.id }}" method="post">
-    <label for="name">Merchant Name:</label>
-    <input type="text" name="name" id="name" value="{{ merchant.name }}">
-    <input type="submit" value="Update Merchant">
-</form>
+    <h2>Update Merchant</h2>
+
+    <form action="/merchants/{{ merchant.id }}" method="post">
+        <label for="name">Merchant Name:</label>
+        <input type="text" name="name" id="name" value="{{ merchant.name }}" class="merchant-fill">
+        <input type="submit" value="Update Merchant" class="add-merchant">
+    </form>
+
+</section>
+
+
 
 
     

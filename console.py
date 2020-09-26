@@ -38,6 +38,13 @@ transaction_repository.save(transaction_2)
 transaction_3 = Transaction(tag_3, merchant_1, 5, "11/04/2020")
 transaction_repository.save(transaction_3)
 
+transaction_4 = Transaction(tag_2, merchant_2, 242, "10/04/2010")
+transaction_repository.save(transaction_4)
+
+
+
+print(tag_repository.transactions(tag_2)[0].__dict__)
+
 
 
 

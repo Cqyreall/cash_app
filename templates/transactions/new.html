@@ -5,26 +5,29 @@
 <h2> Add a New Transaction</h2>
 
 <form action="/transactions" method="post">
-<label for="merchant">Merchant:</label>
-<select name="merchant_id" id="merchant">
-    <option value="">Select a Merchant</option>
-    {% for merchant in merchants %}
-    <option value="{{ merchant.id }}">{{ merchant.name }} </option>   
-    {% endfor %}
-</select>
-<label for="tag">Tag:</label>
-<select name="tag_id" id="tag">
-    <option value="">Select a Tag</option>
-    {% for tag in tags %}
-    <option value="{{ tag.id }}">{{ tag.name }}</option>   
-    {% endfor %}
-</select>
-<label for="amount">Amount:</label>
-<input type="number" name="amount" placeholder="amount">
-<label for="date">Date:</label>
-<input type="date" name="date" placeholder="date">
+    <label for="merchant">Merchant:</label>
+    <select name="merchant_id" id="merchant">
+        <option value="">Select a Merchant</option>
+        {% for merchant in merchants %}
+        <option value="{{ merchant.id }}">{{ merchant.name }} </option>   
+        {% endfor %}
+    </select>
 
-<input type="submit" value="Add Transaction">
+    <label for="tag">Tag:</label>
+    <select name="tag_id" id="tag">
+        <option value="">Select a Tag</option>
+        {% for tag in tags %}
+        <option value="{{ tag.id }}">{{ tag.name }}</option>   
+        {% endfor %}
+    </select>
+
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" placeholder="amount" autocomplete="off">
+    <label for="date">Date:</label>
+    <input type="date" name="date" placeholder="date">
+
+
+    <input type="submit" value="Add Transaction">
 </form>
     
 {% endblock  %}

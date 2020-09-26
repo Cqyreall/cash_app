@@ -2,13 +2,17 @@
 
 {% block content %}
 
+<section class="addition">
+    <h2> Add a New Merchant</h2>
 
-<h2> Add a New Merchant</h2>
+    <form action="/merchants" method="post">
+        <label for="name">Merchant Name:</label>
+        <input type="text" name="name" id="name" placeholder="Name" class="merchant-fill" autocomplete="off" required autofocus>
+        <input type="submit" value="Add merchant" class="add-merchant">
+    </form>
+</section>
 
-<form action="/merchants" method="post">
-    <label for="name">Merchant Name:</label>
-    <input type="text" name="name" id="name" placeholder="Name">
-    <input type="submit" value="Add merchant">
-</form>
+
+
     
 {% endblock  %}

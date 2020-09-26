@@ -14,11 +14,11 @@ app.register_blueprint(transactions_blueprint)
 @app.route('/')
 def main():
     # return render_template('index.html')
-    return render_template('homepage.html')
+    return render_template('index.html')
 
 @app.route("/home")
 def home():
-    return render_template('index.html')
+    return render_template('homepage.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

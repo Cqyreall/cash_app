@@ -3,6 +3,7 @@ from flask import Flask, redirect, request, render_template
 from flask import Blueprint
 import repositories.tag_repository as tag_repository
 from models.tag import Tag
+import repositories.merchant_repository as merchant_repository
 
 tags_blueprint = Blueprint("tags", __name__)
 
@@ -38,6 +39,16 @@ def update_tag(id):
 def delete_tag(id):
     tag_repository.delete(id)
     return redirect("/tags")
+
+@tags_blueprint.route("/tags/<id>")
+def transactions(id):
+    tag = tag_repository.select(id)
+    transactions = tag_repository.transactions(tag)
+    # for transaction in transactions:
+    #     merchant_id.append(transaction.merchant.id)
+    # for num in merchant_id:
+    #     merch = merchant_repository.select(num)
+    return render_template("tags/details.html", tag=tag, transactions=transactions)
 
 
     
