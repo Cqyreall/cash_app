@@ -189,5 +189,11 @@ progress
     background-color: lightblue;
 }
 
+.transaction-header {
+    margin-left: 10px;
+    font-family: 'Lato', cursive;
+    font-size: 32px;
+}
+
 
 

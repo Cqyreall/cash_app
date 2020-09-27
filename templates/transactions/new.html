@@ -2,42 +2,55 @@
 
 {% block content %}
 
-<h2> Add a New Transaction</h2>
+<h2 class="transaction-header"> Add a New Transaction</h2>
+
+<section class="new-transaction" >
+    <form action="/transactions" method="post">
+
+        <label for="merchant" class="labels">Merchant:</label>
+        <section>
+            <select name="merchant_id" id="merchant" class="options">
+                <option value="">Select a Merchant</option>
+                {% for merchant in merchants %}
+                <option value="{{ merchant.id }}">{{ merchant.name }} </option>   
+                {% endfor %}
+            </select>
+        </section>
+        
+        <label for="tag" class="labels">Tag:</label>
+        <section>
+            <select name="tag_id" id="tag" class="options">
+                <option value="">Select a Tag</option>
+                {% for tag in tags %}
+                <option value="{{ tag.id }}">{{ tag.name }}</option>   
+                {% endfor %}
+            </select>
+        </section>
+
+        <label for="user" class="labels">User:</label>
+        <section>
+            <select name="user_id" id="user" class="options">
+                <option value="">Select a User</option>
+                {% for user in users %}
+                <option value="{{ user.id }}">{{ user.name }}</option>   
+                {% endfor %}
+            </select>
+        </section>
+
+        <label for="amount" class="labels">Amount:</label>
+        <section>
+            <input type="number" name="amount" placeholder="amount" autocomplete="off" class="option-input">
+        </section>
+
+        <label for="date" class="labels">Date:</label>
+        <section>
+            <input type="date" name="date" placeholder="date" class="option-input">
+        </section>
+
+        <input type="submit" value="Add Transaction" class="options">
+    </form>
+</section>
 
 
-
-<form action="/transactions" method="post">
-    <label for="merchant">Merchant:</label>
-    <select name="merchant_id" id="merchant">
-        <option value="">Select a Merchant</option>
-        {% for merchant in merchants %}
-        <option value="{{ merchant.id }}">{{ merchant.name }} </option>   
-        {% endfor %}
-    </select>
-
-    <label for="tag">Tag:</label>
-    <select name="tag_id" id="tag">
-        <option value="">Select a Tag</option>
-        {% for tag in tags %}
-        <option value="{{ tag.id }}">{{ tag.name }}</option>   
-        {% endfor %}
-    </select>
-
-    <label for="user">User:</label>
-    <select name="user_id" id="tag">
-        <option value="">Select a User</option>
-        {% for user in users %}
-        <option value="{{ user.id }}">{{ user.name }}</option>   
-        {% endfor %}
-    </select>
-
-    <label for="amount">Amount:</label>
-    <input type="number" name="amount" placeholder="amount" autocomplete="off">
-    <label for="date">Date:</label>
-    <input type="date" name="date" placeholder="date">
-
-
-    <input type="submit" value="Add Transaction">
-</form>
     
 {% endblock  %}

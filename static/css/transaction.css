@@ -23,4 +23,40 @@
     background-color: #DC143C;
     border-radius: 3%;
   }
-  
+
+.new-transaction {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 30%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.options {
+
+    font-size: 100%;
+    width: 100%;
+    padding: 3px;
+    margin: 10px;
+    margin-top: 0%;
+    border-radius: 5%;
+}
+
+.option-input {
+
+    font-size: 100%;
+    width: 96%;
+    padding: 3px;
+    margin: 10px;
+    margin-top: 0%;
+}
+
+.labels {
+
+    font-size: 16px;
+    font-family: 'Kufam';
+    font-weight: bolder;
+}
+
