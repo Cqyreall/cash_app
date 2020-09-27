@@ -2,36 +2,52 @@
 
 {% block content %}
 
-<h3>Edit a Transaction:</h3>
+<h3 class="transaction-header">Edit a Transaction:</h3>
 
-<form action="/transactions/{{ transaction.id }}" method="post">
-<label for="merchant">Merchant:</label>
-<select name="merchant_id" id="merchant">
-    {% for merchant in merchants %}
-        <option value=" {{ merchant.id }}" {% if merchant.id == transaction.merchant.id %} selected {% endif %}>{{ merchant.name }}</option>
-    {% endfor %}
-</select>
-<label for="tags">Tag:</label>
-<select name="tag_id" id="tag">
-    {% for tag in tags %}
-        <option value="{{ tag.id }}"{% if tag.id == transaction.tag.id %} selected {% endif %}>{{ tag.name }}</option>
-    {% endfor %}
-</select>
 
-<label for="user">User:</label>
-<select name="user_id" id="user">
-    {% for user in users %}
-        <option value="{{ user.id }}"{% if user.id == transaction.user.id %} selected {% endif %}>{{ user.name }}</option>
-    {% endfor %}
-</select>
+<section class="new-transaction">
+    <form action="/transactions/{{ transaction.id }}" method="post">
+        <label for="merchant" class="labels">Merchant:</label>
+        <section>
+            <select name="merchant_id" id="merchant" class="options">
+                {% for merchant in merchants %}
+                    <option value=" {{ merchant.id }}" {% if merchant.id == transaction.merchant.id %} selected {% endif %}>{{ merchant.name }}</option>
+                {% endfor %}
+            </select>
+        </section>
+        
+        <label for="tags" class="labels">Tag:</label>
+        <section>
+            <select name="tag_id" id="tag" class="options">
+                {% for tag in tags %}
+                    <option value="{{ tag.id }}"{% if tag.id == transaction.tag.id %} selected {% endif %}>{{ tag.name }}</option>
+                {% endfor %}
+            </select>
+        </section>
+        
+        <label for="user" class="labels">User:</label>
 
-<label for="amount">Amount</label>
-<input type="number" name="amount" value="{{ transaction.amount }}">
+        <section>
+            <select name="user_id" id="user" class="options">
+                {% for user in users %}
+                    <option value="{{ user.id }}"{% if user.id == transaction.user.id %} selected {% endif %}>{{ user.name }}</option>
+                {% endfor %}
+            </select>
+        </section>
+        
+        <label for="amount" class="labels">Amount</label>
+        <section>
+            <input type="number" name="amount" value="{{ transaction.amount }}" class="option-input">
+        </section>
 
-<label for="date">Date</label>
-<input type="date" name="date" value="{{ transaction.date }}">
+        <label for="date" class="labels">Date</label>
+        <section>
+            <input type="date" name="date" value="{{ transaction.date }}" class="option-input">
+        </section>
+        
+        <input type="submit" value="Update Transaction" class="options">
+    </form>
+</section>
 
-<input type="submit" value="Update Transaction">
-</form>
     
 {% endblock  %}

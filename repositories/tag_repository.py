@@ -4,6 +4,7 @@ from models.tag import Tag
 from models.merchant import Merchant
 from models.transaction import Transaction
 import repositories.merchant_repository as merchant_repository
+import repositories.user_repository as user_repository
 
 def save(tag):
     sql = "INSERT INTO tags (name) VALUES (%s) RETURNING *"
@@ -47,16 +48,16 @@ def update(tag):
 def transactions(tag):
     transactions = []
 
-    # sql = "SELECT transactions.amount FROM merchants INNER JOIN transactions ON transactions.merchant_id = merchants.id WHERE transactions.tag_id = %s"
     sql = "SELECT * FROM merchants INNER JOIN transactions ON transactions.merchant_id = merchants.id WHERE transactions.tag_id = %s"
     values =[tag.id]
     results = run_sql(sql, values)
 
     for row in results:
-        # transaction = Transaction(tag, merchant)
         merchant_id = row['merchant_id']
+        user_id = row['user_id']
         merchant = merchant_repository.select(merchant_id)
-        transaction = Transaction(tag, merchant, row['amount'], row['date'])
+        user = user_repository.select(user_id)
+        transaction = Transaction(tag, merchant, user, row['amount'], row['date'])
         transactions.append(transaction)
     return transactions
         

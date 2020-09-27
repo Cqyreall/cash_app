@@ -44,10 +44,6 @@ def delete_tag(id):
 def transactions(id):
     tag = tag_repository.select(id)
     transactions = tag_repository.transactions(tag)
-    # for transaction in transactions:
-    #     merchant_id.append(transaction.merchant.id)
-    # for num in merchant_id:
-    #     merch = merchant_repository.select(num)
     return render_template("tags/details.html", tag=tag, transactions=transactions)
 
 
