@@ -40,3 +40,4 @@ def update_merchant(id):
 def delete_merchant(id):
     merchant_repository.delete(id)
     return redirect("/merchants")
+

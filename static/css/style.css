@@ -93,7 +93,7 @@ body {
 
 .dropdown {
 
-    background-color:#52ce8a;
+    background-color: lightseagreen;
     color: white;
     padding: 8px;
     font-size: 16px;
@@ -144,7 +144,6 @@ body {
     background-color: black;
     font-family: 'Baloo Tammudu 2', cursive;
     margin-bottom: 0;
-    padding: -4px;
 }
 
 .heading {
@@ -152,6 +151,7 @@ body {
     margin-right: 50%; 
     color: whitesmoke;
     align-self: center;
+    
 }
 
 .navigation {

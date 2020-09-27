@@ -3,7 +3,7 @@ from flask import Flask, redirect, request, render_template
 from flask import Blueprint
 import repositories.tag_repository as tag_repository
 from models.tag import Tag
-import repositories.merchant_repository as merchant_repository
+
 
 tags_blueprint = Blueprint("tags", __name__)
 

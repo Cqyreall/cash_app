@@ -1,19 +1,53 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% for user in users %}
-{{
-    user.name
-}}
 
-{{
-    user.budget
-}}
 
-{{
+<h1 class="wel"><center>Welcome {{ new_user.name }} &#9989;</center> </h1>
 
-    user.id
-}} 
-{% endfor %}
-  
+<section>
+
+    <section class="before-instructions">
+        <h2>Cash App helps you track your spendings, start saving and prepares you for the future</h2>
+
+
+        <h3>Confused as to how to start?</h3>
+        <p>Thats where we come in. Read the guidelines below and you are good to go!</p>
+    </section>
+    
+
+    <section class="instructions">
+        <section class="merchant-instruction">
+            <h4 class="instruction-head">Merchants! &#128722;</h4>
+            <ul>
+                <li>Have your favourite shops ready and on the go! You can add your favourite online stores, <br> supermarkets,
+                    car retail and even cinemas saved!
+                </li>
+                <li> These will come in hand when making your transactions.</li>
+            </ul>
+        </section>
+        
+        <section class="merchant-instruction">
+            <h4 class="instruction-head">Tags &#128646;</h4>
+            <ul>
+                <li> Sort your transactions into categories. You can add tags like shopping, groceries 
+                    and transportation.</li>
+                <li> With our special algorithm, you can check your transactions for each tag, and how much you have spent.</li>
+            </ul>
+        </section>
+    
+        <section class="merchant-instruction">
+            <h4 class="instruction-head">Transactions &#129534;</h4>
+            <ul>
+                <li> Using your merchants and tags, you can create new transactions and add amounts as <br> well
+                as dates for each transaction.</li>
+                <li> With our special in built function, you can compare the amount spent with respect <br>
+                to your total budget, and this can give you a breif idea as to what your spending is like.</li>
+            </ul>
+        </section>
+    </section>
+    
+
+</section>
+
 {% endblock  %}

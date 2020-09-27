@@ -1,7 +1,6 @@
 from db.run_sql import run_sql
 from models.merchant import Merchant
 
-
 def save(merchant):
     sql = "INSERT INTO merchants (name) VALUES (%s) RETURNING *"
     values = [merchant.name]
@@ -41,6 +40,7 @@ def update(merchant):
     sql = "UPDATE merchants SET name = %s WHERE id = %s"
     values = [merchant.name, merchant.id]
     run_sql(sql,values)
+
 
 
 
