@@ -2,8 +2,8 @@ from db.run_sql import run_sql
 from models.merchant import Merchant
 
 def save(merchant):
-    sql = "INSERT INTO merchants (name) VALUES (%s) RETURNING *"
-    values = [merchant.name]
+    sql = "INSERT INTO merchants (name, disable) VALUES (%s, %s) RETURNING *"
+    values = [merchant.name, merchant.disable]
     results = run_sql(sql, values)
     merchant.id = results[0]['id']
     return merchant
@@ -15,7 +15,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        merchant = Merchant(row['name'], row['id'])
+        merchant = Merchant(row['name'], row['disable'], row['id'])
         merchants.append(merchant)
     return merchants
 
@@ -23,7 +23,7 @@ def select(id):
     sql = "SELECT * FROM merchants WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
-    merchant = Merchant(result['name'], result['id'])
+    merchant = Merchant(result['name'], result['disable'], result['id'])
     return merchant
 
 def delete_all():
@@ -37,8 +37,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(merchant):
-    sql = "UPDATE merchants SET name = %s WHERE id = %s"
-    values = [merchant.name, merchant.id]
+    sql = "UPDATE merchants SET (name, disable) = (%s, %s) WHERE id = %s"
+    values = [merchant.name, merchant.disable, merchant.id]
     run_sql(sql,values)
 
 

@@ -14,13 +14,13 @@ def merchants():
 
 @merchants_blueprint.route("/merchants/new")
 def new_merchant():
-    # merchants = merchant_repository.select_all()
     return render_template("merchants/new.html") 
 
 @merchants_blueprint.route("/merchants", methods=['POST'])
 def create_merchant():
     name = request.form['name']
-    new_merchant = Merchant(name)
+    disable = True if 'disable' in request.form else False
+    new_merchant = Merchant(name, disable)
     merchant_repository.save(new_merchant)
     return redirect("/merchants")
 
@@ -32,7 +32,8 @@ def edit_merchant(id):
 @merchants_blueprint.route("/merchants/<id>", methods=['POST'])
 def update_merchant(id):
     name = request.form['name']
-    merchant = Merchant(name, id)
+    disable = True if 'disable' in request.form else False
+    merchant = Merchant(name, disable, id)
     merchant_repository.update(merchant)
     return redirect("/merchants")
 

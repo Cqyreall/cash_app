@@ -10,6 +10,8 @@
     <form action="/merchants/{{ merchant.id }}" method="post">
         <label for="name">Merchant Name:</label>
         <input type="text" name="name" id="name" value="{{ merchant.name }}" class="merchant-fill">
+        <label for="disable">Disable?</label>
+        <input type="checkbox" name="disable" id="disable" value="{{ merchant.disable }}" {% if merchant.disable == True %} checked {%endif%} >
         <input type="submit" value="Update Merchant" class="add-merchant">
     </form>
 

@@ -12,7 +12,11 @@
             <select name="merchant_id" id="merchant" class="options">
                 <option value="">Select a Merchant</option>
                 {% for merchant in merchants %}
-                <option value="{{ merchant.id }}">{{ merchant.name }} </option>   
+                {% if merchant.disable == True %}
+                <option value="{{ merchant.id }}" disabled>{{ merchant.name }}</option>
+                {% else %}
+                <option value="{{ merchant.id }}">{{ merchant.name }} </option>  
+                {% endif %} 
                 {% endfor %}
             </select>
         </section>
