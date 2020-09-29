@@ -37,12 +37,12 @@
         
         <label for="amount" class="labels">Amount</label>
         <section>
-            <input type="number" name="amount" value="{{ transaction.amount }}" class="option-input">
+            <input type="number" name="amount" value="{{ transaction.amount }}" class="option-input" required>
         </section>
 
         <label for="date" class="labels">Date</label>
         <section>
-            <input type="date" name="date" value="{{ transaction.date }}" class="option-input">
+            <input type="date" name="date" value="{{ transaction.date }}" class="option-input" required>
         </section>
         
         <input type="submit" value="Update Transaction" class="options">

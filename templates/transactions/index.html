@@ -41,7 +41,7 @@
     <section>
         {% if track < 90  %}
         <section class="good-spending">
-            <label for="budget track">Good Job Saving:</label>
+            <label for="budget track">{{ track }}% of budget spent:</label>
             <progress id="prog" value={{track}} max=100>Progress</progress> 
         </section>
          
