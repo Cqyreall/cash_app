@@ -17,7 +17,7 @@ def transactions():
     for user in users:
         user_budget.append(user.budget)
     sum_total = sum(user_budget)
-    track = (total_amount/sum_total) * 100
+    track = round((total_amount/sum_total) * 100, 2)
     return render_template("transactions/index.html", transactions=transactions, total_amount=total_amount, track=track)
 
 @transactions_blueprint.route("/transactions/new")
